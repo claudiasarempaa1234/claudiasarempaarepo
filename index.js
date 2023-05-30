@@ -8,10 +8,8 @@ app.get('/', (req, res) => {
   const radius = parseFloat(req.query.radius);
   if (!isNaN(radius)) {
     const area = Math.PI * radius * radius;
-    res.send(`Claudia yakomina sarempaa \n`);
     res.send(`The area of the circle with radius ${radius} is ${area.toFixed(2)}`);
   } else {
-    res.send(`Claudia yakomina sarempaa \n`);
     res.send('Please provide a radius parameter in your query string');
   }
 });
